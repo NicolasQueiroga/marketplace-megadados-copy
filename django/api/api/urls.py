@@ -4,13 +4,13 @@ from django.conf.urls.static import static
 from django.conf import settings
 from .views import index
 
-BASE_URL = ''
+BASE_URL = ""
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('checkserver/', index, name='index'),
-    path('', include('store.urls')),
+    path("admin/", admin.site.urls),
+    path("checkserver/", index, name="index"),
+    path("", include("store.urls")),
 ]
 
 if settings.DEBUG:
